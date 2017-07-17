@@ -139,9 +139,7 @@ class API(object):
         url = self.uri + urlpath
 
         if conn is None:
-            if self.conn is None:
-                self.conn = connection.Connection()
-            conn = self.conn
+            self.conn = connection.Connection()
 
         if headers is None:
             headers = {}
